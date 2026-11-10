@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ma première pull request</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 36rem; margin: 4rem auto; padding: 1rem; background: #f5f3ff; color: #272047; }
+      button { font: inherit; padding: .75rem 1.25rem; border: 0; border-radius: .5rem; background: #5b21b6; color: white; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <h1>Ma première pull request 🚀</h1>
+    <p>Un petit compteur pour tester une modification.</p>
+    <button id="increment" type="button">Ajouter un clic</button>
+    <p id="counter" role="status">0 clic</p>
+    <script>
+      let count = 0;
+      document.querySelector('#increment').addEventListener('click', () => {
+        count += 1;
+        document.querySelector('#counter').textContent =
+          `${count} clic${count > 1 ? 's' : ''}`;
+      });
+    </script>
+  </body>
+</html>
